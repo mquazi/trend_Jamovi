@@ -1,0 +1,11 @@
+---
+name:  MannKendall
+title: MannKendall test for trend analysis
+jrs:   '1.1'
+
+items:
+    - name:  text
+      title: MannKendall test for trend analysis
+      type:  Preformatted
+
+...

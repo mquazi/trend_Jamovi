@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Mann-Kendall trend test for monthly environmental time series</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for SeasonalMannKendall {Kendall}"><tr><td>SeasonalMannKendall {Kendall}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2> Mann-Kendall trend test for monthly environmental time series </h2>
+
+<h3>Description</h3>
+
+<p>Hirst et al. (1982) suggested this test for monthly water quality time series.
+The test is also discussed by Hipel and McLeod (2005).
+</p>
+<p>The score is computed separately for each month.
+</p>
+<p>The purpose of this test is to test for monotonic trend. A common misconception
+is to look for trends in the individual monthly time series.  Usually this does
+not make a lot of sense, in the context of environmental time series,
+since if there is a real trend of interest in the series
+it would not be expected to be greatly changed by seasonality.  If indeed one
+were interested in detecting a trend a particular month then one could use
+the MannKendall trend test for that particular month or group of months.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+SeasonalMannKendall(x)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p> a vector or a time series comprised of consecutive monthly values </p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A list with class Kendall.
+</p>
+<table summary="R valueblock">
+<tr valign="top"><td><code>tau</code></td>
+<td>
+<p> Kendall's tau statistic</p>
+</td></tr>
+<tr valign="top"><td><code>sl </code></td>
+<td>
+<p>two-sided p-value</p>
+</td></tr>
+<tr valign="top"><td><code>S</code></td>
+<td>
+<p>Kendall Score</p>
+</td></tr>
+<tr valign="top"><td><code>D </code></td>
+<td>
+<p>Denominator, tau=S/D</p>
+</td></tr>
+<tr valign="top"><td><code>varS </code></td>
+<td>
+<p>variance of S</p>
+</td></tr>
+</table>
+<p>Generic function print.Kendall and summary.Kendall are provided.
+</p>
+
+
+<h3>Note</h3>
+
+<p> If you want to use the output from SeasonalMannKendall,
+save the result as in res&lt;-SeasonalMannKendall(x,y) and then select from the list res the
+value(s) needed. </p>
+
+
+<h3>Author(s)</h3>
+
+<p>A.I. McLeod, aimcleod@uwo.ca </p>
+
+
+<h3>References</h3>
+
+ 
+<p>Hirsch, R.M., Slack, J.R. and Smith, R.A. (1982), 
+Techniques for trend assessment for monthly water quality data, 
+Water Resources Research 18, 107-121.
+</p>
+<p>Hipel, K.W. and McLeod, A.I., (2005).
+Time Series Modelling of Water Resources and Environmental Systems.
+Electronic reprint of our book orginally published in 1994.
+<a href="http://www.stats.uwo.ca/faculty/aim/1994Book/">http://www.stats.uwo.ca/faculty/aim/1994Book/</a>.
+</p>
+
+
+<h3>See Also</h3>
+
+<p><code><a href="../../Kendall/help/MannKendall.html">MannKendall</a></code></p>
+
+
+<h3>Examples</h3>
+
+<pre>
+#test for monotonic trend in monthly average river height data
+#for the Rio Negro at Manaus. This data is included in the 
+#package boot.
+library(boot) 
+data(manaus)
+SeasonalMannKendall(manaus)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Kendall</em> version 2.2.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,17 @@
+title: MannKendall test for trend analysis
+name: MannKendall
+jus: '3.0'
+stage: 0
+compilerMode: aggressive
+children:
+  - type: VariableSupplier
+    persistentItems: false
+    stretchFactor: 1
+    children:
+      - type: TargetLayoutBox
+        label: Series to check trend
+        children:
+          - type: VariablesListBox
+            name: x
+            maxItemCount: 1
+            isTarget: true

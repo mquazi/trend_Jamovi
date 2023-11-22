@@ -1,0 +1,24 @@
+---
+name:  MannKendall
+title: MannKendall test for trend analysis
+menuGroup: TrendAnalysis
+version: '1.0.0'
+jas: '1.2'
+
+options:
+    - name: data
+      type: Data
+      description:
+          R: the data as a data frame
+
+    - name: x
+      title: Series to check trend
+      type: Variable
+      suggested:
+          - continuous
+      permitted:
+          - numeric
+      rejectInf: false
+      description:
+          R: a vector of strings specifying the series variable in `data`
+...

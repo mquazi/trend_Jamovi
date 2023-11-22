@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: print Method for Class 'Kendall'</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for print.Kendall {Kendall}"><tr><td>print.Kendall {Kendall}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>print Method for Class 'Kendall' </h2>
+
+<h3>Description</h3>
+
+<p>The value of Kendall's tau and its two-sided p-value are displayed.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+## S3 method for class 'Kendall'
+print(x, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>output from Kendall, MannKendall or SeasonalMannKendall </p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>any additional arguments</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>NULL
+</p>
+
+
+<h3>Note</h3>
+
+<p> If you want to use the output from Kendall or the other functions,
+save the result as in res&lt;-Kendall(x,y) and then select from res the
+value(s) needed. </p>
+
+
+<h3>Author(s)</h3>
+
+<p> A.I. McLeod, aimcleod@uwo.ca </p>
+
+
+<h3>See Also</h3>
+
+ <p><code><a href="../../Kendall/help/summary.Kendall.html">summary.Kendall</a></code>, <code><a href="../../Kendall/help/Kendall.html">Kendall</a></code>,
+<code><a href="../../Kendall/help/MannKendall.html">MannKendall</a></code>,<code><a href="../../Kendall/help/SeasonalMannKendall.html">SeasonalMannKendall</a></code>,
+<code><a href="../../Kendall/help/summary.Kendall.html">summary.Kendall</a></code> </p>
+
+
+<h3>Examples</h3>
+
+<pre>
+x&lt;-1:10
+y&lt;-rnorm(10)
+Kendall(x,y)
+#is equivalent to
+out&lt;-Kendall(x,y)
+print(out)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>Kendall</em> version 2.2.1 <a href="00Index.html">Index</a>]</div>
+</body></html>
