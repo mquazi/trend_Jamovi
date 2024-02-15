@@ -1,19 +1,19 @@
+## File: mannkendall.b.r 
+mannkendallClass <-
+    if (requireNamespace('jmvcore', quietly = TRUE))
+        R6::R6Class("mannkendallClass",
+            inherit = mannkendallBase,
+            private = list(
+                .run = function() {
 
-# This file is a generated template, your changes will not be overwritten
+                    if ( length(self$options$x) < 1 )
+                        return()
 
-MannKendallClass <- R6::R6Class(
-    "MannKendallClass",
-    inherit = MannKendallBase,
-    private = list(
-        .run = function() {
+                    results <- Kendall::MannKendall(x = self$data[, self$options$x])
 
-            # `self$data` contains the data
-            # `self$options` contains the options
-            # `self$results` contains the results object (to populate)
-          if ( length(self$options$x) < 1 )
-            return()
-          results <- Kendall::MannKendall(self$options$x)
-          
-          self$results$text$setContent(results)
-        })
-)
+                    self$results$text$setContent(results)
+
+                }
+
+            )
+        )
