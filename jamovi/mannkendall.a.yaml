@@ -1,5 +1,5 @@
 ---
-name:  MannKendall
+name:  mannkendall
 title: MannKendall test for trend analysis
 menuGroup: TrendAnalysis
 version: '1.0.0'
