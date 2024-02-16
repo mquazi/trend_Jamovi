@@ -13,7 +13,7 @@ description: >-
   indenting paragraphs within the Description.
 analyses:
   - title: MannKendall test for trend analysis
-    name: MannKendall
+    name: mannkendall
     ns: TrendAnalysis
     menuGroup: TrendAnalysis
     menuTitle: MannKendall test for trend analysis
